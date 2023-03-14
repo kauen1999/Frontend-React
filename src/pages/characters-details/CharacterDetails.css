@@ -1,0 +1,66 @@
+.CharacterDetails-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.CharacterDetails-container h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.CharacterDetails-container img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+
+.CharacterDetails-container .info-label {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.CharacterDetails-container .episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.CharacterDetails-container .episode-item {
+  background-color: #f2f2f2;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  min-width: 120px;
+}
+
+.CharacterDetails-container .episode-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CharacterDetails-container .episode-item p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.episode-item {
+  flex: 1 1 25%;
+  margin: 0.5rem;
+}
