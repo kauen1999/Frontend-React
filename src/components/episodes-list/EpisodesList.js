@@ -7,14 +7,20 @@ const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/episode')
-      .then(response => setEpisodes(response.data.results))
-      .catch(error => console.log(error));
+    const fetchEpisodes = async () => {
+      try {
+        const response = await axios.get('https://rickandmortyapi.com/api/episode');
+        setEpisodes(response.data.results);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchEpisodes();
   }, []);
 
   return (
     <div className="EpisodeList-container">
-      {episodes.map(episode => (
+      {episodes.map((episode) => (
         <Card key={episode.id} style={{ width: '18rem', marginBottom: '1rem' }}>
           <Card.Body>
             <Card.Title>{episode.name}</Card.Title>
